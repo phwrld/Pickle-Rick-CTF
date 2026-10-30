@@ -114,7 +114,13 @@ I investigated the current user's sudo permissions:
 sudo -l
 ```
 
-The configuration revealed that the web server user could execute commands as root without password authentication.
+After this, is returned this answer.
+
+## Matching Defaults entries for www-data on ip-10-66-176-158:
+## env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+## User www-data may run the following commands on ip-10-66-176-158:
+## (ALL) NOPASSWD: ALL
+## The configuration revealed that the web server user could execute commands as root without password authentication.
 
 This represented a serious privilege-management weakness.
 
