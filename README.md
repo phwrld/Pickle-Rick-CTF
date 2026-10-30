@@ -20,7 +20,7 @@ The objective was to investigate a vulnerable web server, identify exposed infor
 
 The challenge allowed me to practice reconnaissance, web enumeration, Linux commands and privilege escalation.
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 - **Nmap:** Network reconnaissance and port scanning
 - **Gobuster:** Web directory and file enumeration
@@ -47,7 +47,7 @@ The scan identified two open TCP ports:
 
 The HTTP service became the primary focus of the investigation.
 
-## 🌐 2. Web Enumeration
+## Web Enumeration
 
 I inspected the website's HTML source code and discovered a username exposed in an HTML comment.
 
@@ -58,17 +58,21 @@ gobuster dir -u http://TARGET_IP \
 -w /usr/share/wordlists/dirb/common.txt
 ```
 
+![GOBUSTER](GOBUSTER.PNG)
+
 The investigation revealed directories and files that provided additional clues.
 
-## 🔐 3. Authentication
+## Authentication
 
 During the enumeration process, I found an exposed credential in a publicly accessible file.
 
 Using the discovered information, I authenticated to the application's web portal.
 
+![HOME](HOME.PNG)
+
 **Security issue:** Sensitive Information Exposure.
 
-## 💻 4. Command Execution
+## Command Execution
 
 After authentication, I discovered a command execution panel.
 
@@ -84,7 +88,7 @@ Some commands were restricted by the application.
 
 However, alternative commands allowed me to continue inspecting accessible files.
 
-## 📂 5. File System Enumeration
+## File System Enumeration
 
 I explored the Linux file system to locate the hidden ingredients.
 
@@ -98,7 +102,7 @@ grep . "filename"
 
 This phase reinforced my understanding of Linux directories, file permissions and command execution.
 
-## 🔓 6. Privilege Escalation
+## Privilege Escalation
 
 I investigated the current user's sudo permissions:
 
@@ -110,7 +114,7 @@ The configuration revealed that the web server user could execute commands as ro
 
 This represented a serious privilege-management weakness.
 
-## 🧠 Key Takeaways
+## Key Takeaways !
 
 - Understanding Nmap results before proceeding with enumeration
 - Identifying exposed information in web applications
@@ -119,7 +123,7 @@ This represented a serious privilege-management weakness.
 - Investigating sudo misconfigurations
 - Following evidence instead of randomly executing tools
 
-## 🏁 Conclusion
+## Conclusion
 
 Pickle Rick was my first completed TryHackMe CTF.
 
