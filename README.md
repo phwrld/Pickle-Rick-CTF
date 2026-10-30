@@ -43,7 +43,7 @@ The scan identified two open TCP ports:
 | 22 | SSH |
 | 80 | HTTP |
 
-![NMAP] (NMAP.png)
+![NMAP](NMAP.png)
 
 The HTTP service became the primary focus of the investigation.
 
