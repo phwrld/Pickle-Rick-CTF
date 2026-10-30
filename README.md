@@ -59,7 +59,7 @@ gobuster dir -u http://TARGET_IP \
 ```
 
 
-[GOBUSTER](GOBUSTER.PNG)
+![GOBUSTER](GOBUSTER.PNG)
 
 
 The investigation revealed directories and files that provided additional clues.
@@ -72,7 +72,7 @@ Using the discovered information, I authenticated to the application's web porta
 
 
 
-[HOME](HOME.PNG)
+![HOME](HOME.PNG)
 
 **Security issue:** Sensitive Information Exposure.
 
