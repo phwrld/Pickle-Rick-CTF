@@ -58,7 +58,9 @@ gobuster dir -u http://TARGET_IP \
 -w /usr/share/wordlists/dirb/common.txt
 ```
 
-![GOBUSTER](GOBUSTER.PNG)
+
+[GOBUSTER](GOBUSTER.PNG)
+
 
 The investigation revealed directories and files that provided additional clues.
 
@@ -68,7 +70,9 @@ During the enumeration process, I found an exposed credential in a publicly acce
 
 Using the discovered information, I authenticated to the application's web portal.
 
-![HOME](HOME.PNG)
+
+
+[HOME](HOME.PNG)
 
 **Security issue:** Sensitive Information Exposure.
 
